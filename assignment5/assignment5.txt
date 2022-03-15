@@ -1,0 +1,1489 @@
+Microsoft Windows [Version 10.0.22000.493]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\USER>mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("8c82b8a2-bf64-4282-a831-78036a0c2478") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-10T07:32:58.034+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+Mock_movies   0.000GB
+admin         0.000GB
+config        0.000GB
+databaseName  0.000GB
+local         0.000GB
+> use Mock_movies
+switched to db Mock_movies
+> show collections
+movies
+> db.movies.find({})
+{ "_id" : ObjectId("622b3d2d264571862022070b"), "id" : 1, "movie_name" : "Iceman Cometh, The", "movie_genre" : "Drama", "production_year" : 2004, "budget" : 11918 }
+{ "_id" : ObjectId("622b3d2d264571862022070c"), "id" : 2, "movie_name" : "Loverboy", "movie_genre" : "Comedy", "production_year" : 2000, "budget" : 9912 }
+{ "_id" : ObjectId("622b3d2d264571862022070d"), "id" : 3, "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)", "movie_genre" : "Horror|Sci-Fi", "production_year" : 2014, "budget" : 12373 }
+{ "_id" : ObjectId("622b3d2d264571862022070e"), "id" : 4, "movie_name" : "Rock-A-Doodle", "movie_genre" : "Adventure|Animation|Children|Musical", "production_year" : 2015, "budget" : 10142 }
+{ "_id" : ObjectId("622b3d2d264571862022070f"), "id" : 5, "movie_name" : "Heaven & Earth", "movie_genre" : "Action|Drama|War", "production_year" : 2014, "budget" : 10689 }
+{ "_id" : ObjectId("622b3d2d2645718620220710"), "id" : 6, "movie_name" : "Santa Clause 3: The Escape Clause, The", "movie_genre" : "Comedy|Fantasy", "production_year" : 1995, "budget" : 15248 }
+{ "_id" : ObjectId("622b3d2d2645718620220711"), "id" : 7, "movie_name" : "Chicken Run", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1992, "budget" : 11718 }
+{ "_id" : ObjectId("622b3d2d2645718620220712"), "id" : 8, "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)", "movie_genre" : "Comedy", "production_year" : 2006, "budget" : 10329 }
+{ "_id" : ObjectId("622b3d2d2645718620220713"), "id" : 9, "movie_name" : "Big Hero 6", "movie_genre" : "Action|Animation|Comedy", "production_year" : 1992, "budget" : 16271 }
+{ "_id" : ObjectId("622b3d2d2645718620220714"), "id" : 10, "movie_name" : "Hercules", "movie_genre" : "Adventure|Animation|Children|Comedy|Musical", "production_year" : 1995, "budget" : 10486 }
+{ "_id" : ObjectId("622b3d2d2645718620220715"), "id" : 11, "movie_name" : "Grandpa for Christmas, A (Bert & Becca)", "movie_genre" : "Comedy|Drama", "production_year" : 2011, "budget" : 10500 }
+{ "_id" : ObjectId("622b3d2d2645718620220716"), "id" : 12, "movie_name" : "Rebirth", "movie_genre" : "Documentary", "production_year" : 2001, "budget" : 18769 }
+{ "_id" : ObjectId("622b3d2d2645718620220717"), "id" : 13, "movie_name" : "Union Pacific", "movie_genre" : "Drama|Western", "production_year" : 2009, "budget" : 10184 }
+{ "_id" : ObjectId("622b3d2d2645718620220718"), "id" : 14, "movie_name" : "Standing Up", "movie_genre" : "Adventure|Children", "production_year" : 2020, "budget" : 11277 }
+{ "_id" : ObjectId("622b3d2d2645718620220719"), "id" : 15, "movie_name" : "Kabhi Haan Kabhi Naa", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 2019, "budget" : 9370 }
+{ "_id" : ObjectId("622b3d2d264571862022071a"), "id" : 16, "movie_name" : "Bird People", "movie_genre" : "Drama|Fantasy|Romance", "production_year" : 2003, "budget" : 19203 }
+{ "_id" : ObjectId("622b3d2d264571862022071b"), "id" : 17, "movie_name" : "Devil's Trap, The (Dáblova past)", "movie_genre" : "Drama", "production_year" : 2013, "budget" : 17239 }
+{ "_id" : ObjectId("622b3d2d264571862022071c"), "id" : 18, "movie_name" : "Two Days", "movie_genre" : "Comedy|Drama|Thriller", "production_year" : 2008, "budget" : 11151 }
+{ "_id" : ObjectId("622b3d2d264571862022071d"), "id" : 19, "movie_name" : "Leaving (Partir)", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 12586 }
+{ "_id" : ObjectId("622b3d2d264571862022071e"), "id" : 20, "movie_name" : "Family Resemblances (Un air de famille)", "movie_genre" : "Comedy", "production_year" : 1991, "budget" : 16156 }
+Type "it" for more
+> db.movies.find({movie_name:{$eq:"Loverboy"}}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070c"),
+        "id" : 2,
+        "movie_name" : "Loverboy",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9912
+}
+> db.movies.find({movie_name:{$ne:"Loverboy"}}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070d"),
+        "id" : 3,
+        "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2014,
+        "budget" : 12373
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070e"),
+        "id" : 4,
+        "movie_name" : "Rock-A-Doodle",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2015,
+        "budget" : 10142
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070f"),
+        "id" : 5,
+        "movie_name" : "Heaven & Earth",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2014,
+        "budget" : 10689
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220710"),
+        "id" : 6,
+        "movie_name" : "Santa Clause 3: The Escape Clause, The",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 1995,
+        "budget" : 15248
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220711"),
+        "id" : 7,
+        "movie_name" : "Chicken Run",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1992,
+        "budget" : 11718
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220713"),
+        "id" : 9,
+        "movie_name" : "Big Hero 6",
+        "movie_genre" : "Action|Animation|Comedy",
+        "production_year" : 1992,
+        "budget" : 16271
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220714"),
+        "id" : 10,
+        "movie_name" : "Hercules",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Musical",
+        "production_year" : 1995,
+        "budget" : 10486
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220715"),
+        "id" : 11,
+        "movie_name" : "Grandpa for Christmas, A (Bert & Becca)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10500
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220719"),
+        "id" : 15,
+        "movie_name" : "Kabhi Haan Kabhi Naa",
+        "movie_genre" : "Comedy|Drama|Musical|Romance",
+        "production_year" : 2019,
+        "budget" : 9370
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071b"),
+        "id" : 17,
+        "movie_name" : "Devil's Trap, The (Dáblova past)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 17239
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071e"),
+        "id" : 20,
+        "movie_name" : "Family Resemblances (Un air de famille)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 16156
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071f"),
+        "id" : 21,
+        "movie_name" : "Lakeview Terrace",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 18073
+}
+Type "it" for more
+>>  db.movies.find({"budget": {$gte: 12679}}).pretty()
+{
+        "_id" : ObjectId("622b3d2d2645718620220710"),
+        "id" : 6,
+        "movie_name" : "Santa Clause 3: The Escape Clause, The",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 1995,
+        "budget" : 15248
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220713"),
+        "id" : 9,
+        "movie_name" : "Big Hero 6",
+        "movie_genre" : "Action|Animation|Comedy",
+        "production_year" : 1992,
+        "budget" : 16271
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071b"),
+        "id" : 17,
+        "movie_name" : "Devil's Trap, The (Dáblova past)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 17239
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071e"),
+        "id" : 20,
+        "movie_name" : "Family Resemblances (Un air de famille)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 16156
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071f"),
+        "id" : 21,
+        "movie_name" : "Lakeview Terrace",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 18073
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220721"),
+        "id" : 23,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2016,
+        "budget" : 14758
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220722"),
+        "id" : 24,
+        "movie_name" : "Teenage Mutant Ninja Turtles: Turtles Forever",
+        "movie_genre" : "Action|Adventure|Animation|Comedy|Thriller",
+        "production_year" : 1994,
+        "budget" : 15079
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220723"),
+        "id" : 25,
+        "movie_name" : "The Youngest Profession",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 18487
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220724"),
+        "id" : 26,
+        "movie_name" : "Landscape with a Woman (Zena s krajolikom)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 15228
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220725"),
+        "id" : 27,
+        "movie_name" : "Sweet Jesus, Preacherman",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2006,
+        "budget" : 18729
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220726"),
+        "id" : 28,
+        "movie_name" : "Chungking Express (Chung Hing sam lam)",
+        "movie_genre" : "Drama|Mystery|Romance",
+        "production_year" : 1990,
+        "budget" : 17996
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220727"),
+        "id" : 29,
+        "movie_name" : "Strange Planet",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 16123
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220728"),
+        "id" : 30,
+        "movie_name" : "Puddle Cruiser",
+        "movie_genre" : "Comedy",
+        "production_year" : 2011,
+        "budget" : 16999
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220729"),
+        "id" : 31,
+        "movie_name" : "Candy Snatchers, The",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1995,
+        "budget" : 13439
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072a"),
+        "id" : 32,
+        "movie_name" : "Trouble with Girls, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18447
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072b"),
+        "id" : 33,
+        "movie_name" : "Phantom",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2001,
+        "budget" : 15815
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072d"),
+        "id" : 35,
+        "movie_name" : "You May Not Kiss the Bride",
+        "movie_genre" : "Action|Comedy|Crime|Romance",
+        "production_year" : 2014,
+        "budget" : 19153
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072e"),
+        "id" : 36,
+        "movie_name" : "Popular Music (Populärmusik från Vittula)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2014,
+        "budget" : 17212
+}
+Type "it" for more
+> db.movies.find({"budget": {$lte: 12679}}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070c"),
+        "id" : 2,
+        "movie_name" : "Loverboy",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9912
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070d"),
+        "id" : 3,
+        "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2014,
+        "budget" : 12373
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070e"),
+        "id" : 4,
+        "movie_name" : "Rock-A-Doodle",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2015,
+        "budget" : 10142
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070f"),
+        "id" : 5,
+        "movie_name" : "Heaven & Earth",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2014,
+        "budget" : 10689
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220711"),
+        "id" : 7,
+        "movie_name" : "Chicken Run",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1992,
+        "budget" : 11718
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220714"),
+        "id" : 10,
+        "movie_name" : "Hercules",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Musical",
+        "production_year" : 1995,
+        "budget" : 10486
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220715"),
+        "id" : 11,
+        "movie_name" : "Grandpa for Christmas, A (Bert & Becca)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10500
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220719"),
+        "id" : 15,
+        "movie_name" : "Kabhi Haan Kabhi Naa",
+        "movie_genre" : "Comedy|Drama|Musical|Romance",
+        "production_year" : 2019,
+        "budget" : 9370
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220720"),
+        "id" : 22,
+        "movie_name" : "Bianca Beauchamp: All Access",
+        "movie_genre" : "Documentary",
+        "production_year" : 1991,
+        "budget" : 12509
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072c"),
+        "id" : 34,
+        "movie_name" : "The 39 Steps",
+        "movie_genre" : "Action|Adventure|Comedy|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 11066
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220730"),
+        "id" : 38,
+        "movie_name" : "Rest Stop",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1998,
+        "budget" : 10711
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220731"),
+        "id" : 39,
+        "movie_name" : "Goya's Ghosts",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 11459
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220733"),
+        "id" : 41,
+        "movie_name" : "Nazi Officer's Wife, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 1995,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022073d"),
+        "id" : 51,
+        "movie_name" : "Tale of Despereaux, The",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Fantasy",
+        "production_year" : 2009,
+        "budget" : 10582
+}
+Type "it" for more
+> db.movies.find({$and: [{"production_year":{$gt:2000}}, {"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070d"),
+        "id" : 3,
+        "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2014,
+        "budget" : 12373
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070e"),
+        "id" : 4,
+        "movie_name" : "Rock-A-Doodle",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2015,
+        "budget" : 10142
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070f"),
+        "id" : 5,
+        "movie_name" : "Heaven & Earth",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2014,
+        "budget" : 10689
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220715"),
+        "id" : 11,
+        "movie_name" : "Grandpa for Christmas, A (Bert & Becca)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10500
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071b"),
+        "id" : 17,
+        "movie_name" : "Devil's Trap, The (Dáblova past)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 17239
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071f"),
+        "id" : 21,
+        "movie_name" : "Lakeview Terrace",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 18073
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220721"),
+        "id" : 23,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2016,
+        "budget" : 14758
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220724"),
+        "id" : 26,
+        "movie_name" : "Landscape with a Woman (Zena s krajolikom)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 15228
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220725"),
+        "id" : 27,
+        "movie_name" : "Sweet Jesus, Preacherman",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2006,
+        "budget" : 18729
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220727"),
+        "id" : 29,
+        "movie_name" : "Strange Planet",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 16123
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220728"),
+        "id" : 30,
+        "movie_name" : "Puddle Cruiser",
+        "movie_genre" : "Comedy",
+        "production_year" : 2011,
+        "budget" : 16999
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072b"),
+        "id" : 33,
+        "movie_name" : "Phantom",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2001,
+        "budget" : 15815
+}
+Type "it" for more
+>  db.movies.find({$or: [{"production_year":{$gt:2000}}, {"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070d"),
+        "id" : 3,
+        "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2014,
+        "budget" : 12373
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070e"),
+        "id" : 4,
+        "movie_name" : "Rock-A-Doodle",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2015,
+        "budget" : 10142
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070f"),
+        "id" : 5,
+        "movie_name" : "Heaven & Earth",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2014,
+        "budget" : 10689
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220710"),
+        "id" : 6,
+        "movie_name" : "Santa Clause 3: The Escape Clause, The",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 1995,
+        "budget" : 15248
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220711"),
+        "id" : 7,
+        "movie_name" : "Chicken Run",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1992,
+        "budget" : 11718
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220713"),
+        "id" : 9,
+        "movie_name" : "Big Hero 6",
+        "movie_genre" : "Action|Animation|Comedy",
+        "production_year" : 1992,
+        "budget" : 16271
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220714"),
+        "id" : 10,
+        "movie_name" : "Hercules",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Musical",
+        "production_year" : 1995,
+        "budget" : 10486
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220715"),
+        "id" : 11,
+        "movie_name" : "Grandpa for Christmas, A (Bert & Becca)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10500
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220719"),
+        "id" : 15,
+        "movie_name" : "Kabhi Haan Kabhi Naa",
+        "movie_genre" : "Comedy|Drama|Musical|Romance",
+        "production_year" : 2019,
+        "budget" : 9370
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071b"),
+        "id" : 17,
+        "movie_name" : "Devil's Trap, The (Dáblova past)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 17239
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071e"),
+        "id" : 20,
+        "movie_name" : "Family Resemblances (Un air de famille)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 16156
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071f"),
+        "id" : 21,
+        "movie_name" : "Lakeview Terrace",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 18073
+}
+Type "it" for more
+> db.movies.find({$nor: [{"production_year":{$gt:2000}}, {"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070c"),
+        "id" : 2,
+        "movie_name" : "Loverboy",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9912
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220749"),
+        "id" : 63,
+        "movie_name" : "Mad About Mambo",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1990,
+        "budget" : 9189
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022074c"),
+        "id" : 66,
+        "movie_name" : "Centenarian Who Climbed Out the Window and Vanished, The (Hundraåringen som klev ut genom fönstret och försvann)",
+        "movie_genre" : "Adventure|Comedy|Drama",
+        "production_year" : 2000,
+        "budget" : 9149
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202207a8"),
+        "id" : 158,
+        "movie_name" : "Babysitter, The",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1998,
+        "budget" : 9073
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202207b4"),
+        "id" : 170,
+        "movie_name" : "Hunted City",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1991,
+        "budget" : 9944
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022080a"),
+        "id" : 256,
+        "movie_name" : "Capitalism: A Love Story",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 9320
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220826"),
+        "id" : 284,
+        "movie_name" : "Louis C.K.: Chewed Up",
+        "movie_genre" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 9829
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220842"),
+        "id" : 312,
+        "movie_name" : "As Good as It Gets",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 9030
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208a7"),
+        "id" : 413,
+        "movie_name" : "Blondie Knows Best",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 9572
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208ea"),
+        "id" : 480,
+        "movie_name" : "Burnt by the Sun (Utomlyonnye solntsem)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9376
+}
+> db.movies.find({$or: [{"production_year":{$ne:2000}}, {"budget":{$ne:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070c"),
+        "id" : 2,
+        "movie_name" : "Loverboy",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9912
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070d"),
+        "id" : 3,
+        "movie_name" : "Night of the Hunted, The (Nuit des traquées, La)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2014,
+        "budget" : 12373
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070e"),
+        "id" : 4,
+        "movie_name" : "Rock-A-Doodle",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2015,
+        "budget" : 10142
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022070f"),
+        "id" : 5,
+        "movie_name" : "Heaven & Earth",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2014,
+        "budget" : 10689
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220710"),
+        "id" : 6,
+        "movie_name" : "Santa Clause 3: The Escape Clause, The",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 1995,
+        "budget" : 15248
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220711"),
+        "id" : 7,
+        "movie_name" : "Chicken Run",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1992,
+        "budget" : 11718
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220713"),
+        "id" : 9,
+        "movie_name" : "Big Hero 6",
+        "movie_genre" : "Action|Animation|Comedy",
+        "production_year" : 1992,
+        "budget" : 16271
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220714"),
+        "id" : 10,
+        "movie_name" : "Hercules",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Musical",
+        "production_year" : 1995,
+        "budget" : 10486
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220715"),
+        "id" : 11,
+        "movie_name" : "Grandpa for Christmas, A (Bert & Becca)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10500
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220719"),
+        "id" : 15,
+        "movie_name" : "Kabhi Haan Kabhi Naa",
+        "movie_genre" : "Comedy|Drama|Musical|Romance",
+        "production_year" : 2019,
+        "budget" : 9370
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071b"),
+        "id" : 17,
+        "movie_name" : "Devil's Trap, The (Dáblova past)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 17239
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071e"),
+        "id" : 20,
+        "movie_name" : "Family Resemblances (Un air de famille)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 16156
+}
+Type "it" for more
+> db.movies.find({$and: [{"production_year":{$gt:2000}}, {"production_year":{$lt:2010}}]}).pretty()
+{
+        "_id" : ObjectId("622b3d2d264571862022070b"),
+        "id" : 1,
+        "movie_name" : "Iceman Cometh, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 11918
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220712"),
+        "id" : 8,
+        "movie_name" : "M. Hulot’s Holiday (Mr. Hulot's Holiday) (Vacances de Monsieur Hulot, Les)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220716"),
+        "id" : 12,
+        "movie_name" : "Rebirth",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 18769
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220717"),
+        "id" : 13,
+        "movie_name" : "Union Pacific",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2009,
+        "budget" : 10184
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071a"),
+        "id" : 16,
+        "movie_name" : "Bird People",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2003,
+        "budget" : 19203
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071c"),
+        "id" : 18,
+        "movie_name" : "Two Days",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 11151
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071d"),
+        "id" : 19,
+        "movie_name" : "Leaving (Partir)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 12586
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022071f"),
+        "id" : 21,
+        "movie_name" : "Lakeview Terrace",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 18073
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220725"),
+        "id" : 27,
+        "movie_name" : "Sweet Jesus, Preacherman",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2006,
+        "budget" : 18729
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022072b"),
+        "id" : 33,
+        "movie_name" : "Phantom",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "production_year" : 2001,
+        "budget" : 15815
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220732"),
+        "id" : 40,
+        "movie_name" : "Bingo",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : 2008,
+        "budget" : 18552
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220734"),
+        "id" : 42,
+        "movie_name" : "Paper Chase, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19152
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220737"),
+        "id" : 45,
+        "movie_name" : "Hard Target",
+        "movie_genre" : "Action|Adventure|Crime|Thriller",
+        "production_year" : 2008,
+        "budget" : 19915
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022073d"),
+        "id" : 51,
+        "movie_name" : "Tale of Despereaux, The",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Fantasy",
+        "production_year" : 2009,
+        "budget" : 10582
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022073e"),
+        "id" : 52,
+        "movie_name" : "Venus Boyz",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 11896
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220744"),
+        "id" : 58,
+        "movie_name" : "The Encounter",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 2002,
+        "budget" : 9713
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220745"),
+        "id" : 59,
+        "movie_name" : "Transporter 2",
+        "movie_genre" : "Action|Crime|Thriller",
+        "production_year" : 2005,
+        "budget" : 19254
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220746"),
+        "id" : 60,
+        "movie_name" : "Blue Angel, The (Blaue Engel, Der)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15271
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220747"),
+        "id" : 61,
+        "movie_name" : "Masque of the Red Death, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2002,
+        "budget" : 15325
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022074b"),
+        "id" : 65,
+        "movie_name" : "Koyaanisqatsi (a.k.a. Koyaanisqatsi: Life Out of Balance)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 11043
+}
+Type "it" for more
+> db.movies.find().sort({production_year:-1,movie_name:1}).pretty()
+{
+        "_id" : ObjectId("622b3d2d26457186202208c7"),
+        "id" : 445,
+        "movie_name" : "5th Musketeer, The (a.k.a. Fifth Musketeer, The)",
+        "movie_genre" : "Adventure",
+        "production_year" : 2020,
+        "budget" : 12448
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202207c8"),
+        "id" : 190,
+        "movie_name" : "Boy Culture",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 10155
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220884"),
+        "id" : 378,
+        "movie_name" : "Dead Ringer",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 16381
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022089c"),
+        "id" : 402,
+        "movie_name" : "Faces of Death 2",
+        "movie_genre" : "Documentary|Horror",
+        "production_year" : 2020,
+        "budget" : 12882
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202207ee"),
+        "id" : 228,
+        "movie_name" : "Godzilla vs. King Ghidorah (Gojira vs. Kingu Gidorâ)",
+        "movie_genre" : "Action|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 19237
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022076d"),
+        "id" : 99,
+        "movie_name" : "Hit by Lightning",
+        "movie_genre" : "Comedy|Crime|Romance",
+        "production_year" : 2020,
+        "budget" : 13347
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208b4"),
+        "id" : 426,
+        "movie_name" : "K2",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2020,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220831"),
+        "id" : 295,
+        "movie_name" : "Madame Bovary",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 15628
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220796"),
+        "id" : 140,
+        "movie_name" : "Many Adventures of Winnie the Pooh, The",
+        "movie_genre" : "Animation|Children|Musical",
+        "production_year" : 2020,
+        "budget" : 15642
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220755"),
+        "id" : 75,
+        "movie_name" : "Norte, El",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2020,
+        "budget" : 14965
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220845"),
+        "id" : 315,
+        "movie_name" : "Outer Space",
+        "movie_genre" : "Animation|Horror",
+        "production_year" : 2020,
+        "budget" : 15477
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220765"),
+        "id" : 91,
+        "movie_name" : "Recount",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18320
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208f0"),
+        "id" : 486,
+        "movie_name" : "Skippy",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2020,
+        "budget" : 17909
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022074a"),
+        "id" : 64,
+        "movie_name" : "Sum of All Fears, The",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 18831
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208c5"),
+        "id" : 443,
+        "movie_name" : "Theodore Rex",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 19158
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022076e"),
+        "id" : 100,
+        "movie_name" : "Unfaithful, The",
+        "movie_genre" : "Drama|Film-Noir",
+        "production_year" : 2020,
+        "budget" : 12569
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220833"),
+        "id" : 297,
+        "movie_name" : "Voyage of the Damned",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 12580
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022080b"),
+        "id" : 257,
+        "movie_name" : "Des roses en hiver",
+        "movie_genre" : "Drama",
+        "production_year" : 2019,
+        "budget" : 14856
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202207d2"),
+        "id" : 200,
+        "movie_name" : "Down to the Cellar (Do pivnice)",
+        "movie_genre" : "Adventure|Fantasy|Thriller",
+        "production_year" : 2019,
+        "budget" : 18731
+}
+Type "it" for more
+> db.movies.find().sort({production_year:-1,movie_name:1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("622b3d2d2645718620220845"),
+        "id" : 315,
+        "movie_name" : "Outer Space",
+        "movie_genre" : "Animation|Horror",
+        "production_year" : 2020,
+        "budget" : 15477
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220765"),
+        "id" : 91,
+        "movie_name" : "Recount",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18320
+}
+{
+        "_id" : ObjectId("622b3d2d26457186202208f0"),
+        "id" : 486,
+        "movie_name" : "Skippy",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2020,
+        "budget" : 17909
+}
+{
+        "_id" : ObjectId("622b3d2d2645718620220718"),
+        "id" : 14,
+        "movie_name" : "Standing Up",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11277
+}
+{
+        "_id" : ObjectId("622b3d2d264571862022074a"),
+        "id" : 64,
+        "movie_name" : "Sum of All Fears, The",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 18831
+}
